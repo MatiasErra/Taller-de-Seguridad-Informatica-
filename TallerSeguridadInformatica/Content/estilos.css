@@ -1,0 +1,76 @@
+﻿#header {
+    background-color: #212121
+}
+
+#body {
+    background-color: #e0e0e0
+}
+
+#titulo {
+    color: white;
+    font-size: 26px;
+    font-weight: 500;
+    display: flex;
+    justify-content:start;
+    align-items: start;
+}
+
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+    #links a {
+        color: white;
+        margin-right: 35px;
+    }
+
+#ingreso {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    top: 0;
+    font-weight: 600;
+}
+
+#contenido {
+    width: auto;
+    height: auto;
+    justify-content: center;
+}
+
+#formulario {
+    width: auto;
+    height: auto;
+    display: grid;
+    justify-content: center;
+}
+
+    #formulario input {
+        width: 200px;
+    }
+
+#lista {
+    display: grid;
+    justify-content: center;
+}
+
+.listas {
+    width: 200px;
+}
+
+#linksRep {
+    height: auto;
+    width: 100%;
+    background-color: #212121;
+}
+
+#texto {
+    margin-top: 30px;
+}
+
+    #texto p {
+        font-size: 15px;
+    }
