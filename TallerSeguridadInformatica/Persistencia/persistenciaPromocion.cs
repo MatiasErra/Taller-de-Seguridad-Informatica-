@@ -7,6 +7,7 @@ using System.Text;
 using System.Data.SqlClient;
 using SeguridadInformatica.Dominio;
 using TallerSeguridadInformatica.Dominio;
+
 namespace SeguridadInformatica.Persistencia
 {
 

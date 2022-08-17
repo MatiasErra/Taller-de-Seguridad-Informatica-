@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SeguridadInformatica.Persistencia;
 using TallerSeguridadInformatica.Dominio;
+
 namespace SeguridadInformatica.Dominio
 {
   public class Controladora
