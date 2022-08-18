@@ -51,7 +51,10 @@ namespace TallerSeguridadInformatica.Paginas
         ControladoraWeb unaControladora = new ControladoraWeb();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (System.Web.HttpContext.Current.Session["userId"] == null)
+            {
+                Response.Redirect("~/Paginas/Ingreso.aspx");
+            }
         }
 
         protected void altaPromocion(object sender, EventArgs e)
@@ -62,11 +65,11 @@ namespace TallerSeguridadInformatica.Paginas
             }
             else
             {
-                string Titulo = titulo.Text;
-                string Desc = desc.Text;
-                double PreO = double.Parse(preO.Text);
-                double PreP = double.Parse(preP.Text);
-                int Descuento = int.Parse(descuento.Text);
+                string Titulo = HttpUtility.HtmlEncode(titulo.Text);
+                string Desc = HttpUtility.HtmlEncode(desc.Text);
+                double PreO = double.Parse(HttpUtility.HtmlEncode(preO.Text));
+                double PreP = double.Parse(HttpUtility.HtmlEncode(preP.Text));
+                int Descuento = int.Parse(HttpUtility.HtmlEncode(descuento.Text));
                 string Imagen = "";
                 if (img.HasFile)
                 {
@@ -80,9 +83,11 @@ namespace TallerSeguridadInformatica.Paginas
 
                 }
 
-            string Detalles = dtlls.Text;
-            string Condicion = condic.Text;
-            if (unaControladora.altaPromocion(Titulo, Desc, PreO, PreP, Descuento, Imagen, Detalles, Condicion))
+            string Detalles = HttpUtility.HtmlEncode(dtlls.Text);
+            string Condicion = HttpUtility.HtmlEncode(condic.Text);
+               
+                
+                if (unaControladora.altaPromocion(Titulo, Desc, PreO, PreP, Descuento, Imagen, Detalles, Condicion))
             {
                 lblMensaje.Text = "Promocion creada con exito!!";
             }

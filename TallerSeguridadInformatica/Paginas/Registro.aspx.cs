@@ -72,9 +72,9 @@ namespace TallerSeguridadInformatica.Paginas
                 else
                 {
                     List<Usuario> listaUsuarios = controladora.listarUsuarios();
-                    string Nombre = usuario.Text;
+                    string Nombre = HttpUtility.HtmlEncode(usuario.Text);
                     string Contraseña = "";
-                    byte[] bytes = Encoding.Unicode.GetBytes(contrasenia.Text);
+                    byte[] bytes = Encoding.Unicode.GetBytes(HttpUtility.HtmlEncode(contrasenia.Text));
                     SHA256Managed hashstring = new SHA256Managed();
                     byte[] hash = hashstring.ComputeHash(bytes);
                     foreach (byte x in hash)
