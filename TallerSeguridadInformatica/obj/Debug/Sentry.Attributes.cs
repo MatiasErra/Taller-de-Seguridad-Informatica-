@@ -11,7 +11,8 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyMetadata("Sentry.ProjectDirectory", "C:\\Users\\Mrgat\\Desktop\\Presentacion\\TallerSeguridadInformatica\\")]
+[assembly: System.Reflection.AssemblyMetadata("Sentry.ProjectDirectory", "D:\\Clases\\Clases Programacion\\Seguridad Obligatorio\\Obligatorio-Seguridad-Informa" +
+    "tica\\TallerSeguridadInformatica\\")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
 
